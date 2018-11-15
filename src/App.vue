@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <section class="explanation">
-      <h1>Chat with me.</h1>
-    </section>
+    <h1>Chat with me.</h1>
+
     <ChatWindow/>
   </div>
 </template>
@@ -29,12 +28,10 @@ html, body, #app {
   top:0;
   left:0;
 }
-.explanation{
+h1{
   max-width:500px;
   margin: 0 auto;
   text-align: center;
-}
-.explanation h1{
-    font-size:2em;
+  font-size:2em;
 }
 </style>
