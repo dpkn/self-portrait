@@ -15,20 +15,18 @@
         </span>
       </div>
       <div class="emptyState" v-else>
-        <h1>Chat with me.</h1>
+        <h1>Hi, I'm Dani&euml;l 2</h1>
         <p>
-          I am a machine learning model trained on the <b>59353</b> messages send by Dani&euml;l on WhatsApp over the past <b>five years.</b>
+          I am a bot that uses a machine learning model to generate text messages.
         </p>
         <p>
-          The data on which this model is trained encompasses everything from my darkest secrets to my deepest crushes.
+          My neural network is trained on the <b>59353</b> messages send by Original Dani&euml;l on WhatsApp over the past <b>five years.</b>
+        </p>
+        <p>
+          The data on which this model is trained encompasses everything, from my darkest secrets to my deepest crushes.
         </p>
         <p>
           Have fun!
-        </p>
-        <p>
-          With love,<br/>
-            <b>Original Dani&euml;l</b>
-        <br/>
         </p>
       </div>
     </section>
@@ -63,6 +61,7 @@ export default {
 
    // Use the speechSynthesis API to speak the messages out loud
    this.speachSynth = window.speechSynthesis;
+   this.synthVoices = this.speachSynth.getVoices();
 
    // Getting the list of available voices is an async process
    if (speechSynthesis.onvoiceschanged !== undefined) {
@@ -107,6 +106,9 @@ export default {
       if (this.speachSynth.speaking) {
           return;
       }else{
+        if(typeof this.synthVoices[voice] === 'undefined')
+          voice = 0
+
         let utterThis = new SpeechSynthesisUtterance(text);
         utterThis.voice = this.synthVoices[voice];
         this.speachSynth.speak(utterThis);
@@ -190,6 +192,7 @@ export default {
   background: #fff;
   display: flex;
   flex-flow: column;
+  margin-top: 20px;
 }
 
 header,footer{
@@ -274,6 +277,11 @@ input{
   align-self:flex-end;
 }
 
+.emptyState{
+  text-align: center;
+  padding: 40px;
+  padding-top: 120px;
+}
 /* TYPING ANIMATION
    Inspired by Joseph Fusco
    https://codepen.io/fusco/pen/XbpaYv
