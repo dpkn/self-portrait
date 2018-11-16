@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <h1>Chat with me.</h1>
-
     <ChatWindow/>
   </div>
 </template>
@@ -30,7 +28,7 @@ html, body, #app {
 }
 h1{
   max-width:500px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: center;
   font-size:2em;
 }
