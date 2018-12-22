@@ -17,13 +17,13 @@
       <div class="emptyState" v-else>
         <h1>Hi, I'm Dani&euml;l 2</h1>
         <p>
-          I am a bot that uses a machine learning model to generate text messages.
+          I am a chatbot that uses a machine learning model to generate text messages.
         </p>
         <p>
           My neural network is trained on the <b>59353</b> messages send by Original Dani&euml;l on WhatsApp over the past <b>five years.</b>
         </p>
         <p>
-          The data on which this model is trained encompasses everything, from my darkest secrets to my deepest crushes.
+          The data on which this model is trained encompasses everything I've shared with my closest friends, from my darkest secrets to my deepest crushes.
         </p>
         <p>
           Have fun!
@@ -95,7 +95,7 @@ export default {
       state: NOT_TYPING,
       placeholder:'Type something and press ENTER to send',
       inactivityTimer:0,
-      inactivtyLimit:120, // Amount of s that the app will wait until it resets itself,
+      inactivtyLimit:440, // Amount of s that the app will wait until it resets itself,
       serverURI:'http://127.0.0.1:5000', // URI of the back-end that supplies messages
       idleMessages: ['Ik voel me eenzaam.','Hallo, waarom praat niemand tegen mij','Mag ik wat aandacht alsjeblieft'],
     }
@@ -192,7 +192,7 @@ export default {
   background: #fff;
   display: flex;
   flex-flow: column;
-  margin-top: 20px;
+  margin-top: 300px;
 }
 
 header,footer{
@@ -280,7 +280,7 @@ input{
 .emptyState{
   text-align: center;
   padding: 40px;
-  padding-top: 120px;
+  padding-top: 140px;
 }
 /* TYPING ANIMATION
    Inspired by Joseph Fusco

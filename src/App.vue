@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <ChatWindow/>
+
   </div>
 </template>
 
@@ -31,5 +32,15 @@ h1{
   margin: 30px auto;
   text-align: center;
   font-size:2em;
+}
+#info{
+  max-width: 400px;
+  position: fixed;
+  top:225px;
+  right:80px;
+}
+#info h1{
+  text-align: left;
+  margin-bottom: 0;
 }
 </style>
