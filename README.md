@@ -1,5 +1,5 @@
 # self-portrait I
-![Mobile phone with chat window](sceenshot.png)
+![Mobile phone with chat window](screenshot.png)
 
 This project consists of two parts: a front-end interface built using Vue.js, and a back-end that generates the text messages. Initially I tried using [ml5.js](https://github.com/ml5js/ml5-library) to generate the messages on the front-end, but these were of rather low quality. That is why I decided to use the [textgenrnn](https://github.com/minimaxir/textgenrnn) Python module together with [flask](https://github.com/pallets/flask) to create a simple API server that just returns one generated message every time it's called on the route /message.
 
